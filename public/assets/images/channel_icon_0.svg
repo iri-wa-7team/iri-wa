@@ -1,0 +1,11 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="channel_icon" clip-path="url(#clip0_345_3141)">
+<path id="Exclude" d="M55.7201 0H16.2058C7.25558 0 0 7.25558 0 16.2058V55.7201C0 64.6703 7.25558 71.9259 16.2058 71.9259H55.7201C64.6703 71.9259 71.9259 64.6703 71.9259 55.7201V16.2058C71.9259 7.25558 64.6703 0 55.7201 0Z" fill="#06C755"/>
+<path id="Vector" d="M42.3828 37.2216L29.0378 17.9814H17.9814V53.9444H29.5728V34.7042L42.888 53.9444H53.9444V17.9814H42.3828V37.2216Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_345_3141">
+<rect width="71.9259" height="71.9259" fill="white"/>
+</clipPath>
+</defs>
+</svg>
