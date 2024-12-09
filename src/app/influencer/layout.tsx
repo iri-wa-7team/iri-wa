@@ -1,5 +1,9 @@
 import { ReactNode } from 'react';
 
-export default function InfluencerLayout({ children }: { children: ReactNode }) {
-  return <div>{children}</div>;
+export default function InfluencerLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  return <div className='font-pre'>{children}</div>;
 }

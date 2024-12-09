@@ -1,3 +1,9 @@
+import MainSection from './_view/mainSection';
+
 export default function InfluencerPage() {
-    return <div>InfluencerPage</div>
+  return (
+    <div>
+      <MainSection />
+    </div>
+  );
 }
