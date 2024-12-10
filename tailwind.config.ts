@@ -33,6 +33,7 @@ export default {
       },
       fontFamily: {
         pre: ['var(--font-pretendard)'],
+        montserrat: ['var(--font-montserrat)'],
       },
     },
   },
