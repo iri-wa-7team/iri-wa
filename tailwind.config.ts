@@ -35,6 +35,16 @@ export default {
         pre: ['var(--font-pretendard)'],
         montserrat: ['var(--font-montserrat)'],
       },
+      fontSize: {
+        xxs: ["0.625rem", { lineHeight: "0.75rem" }], 
+        xxxs: ["0.5rem", { lineHeight: "0.5rem" }],
+      },
+      borderWidth: {
+        3: '3px',
+      },
+      screens: {
+        xs: '500px',  // 미디어 쿼리 xs: 500px 추가
+      },
     },
   },
   plugins: [],
