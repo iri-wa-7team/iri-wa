@@ -1,25 +1,23 @@
-import Header from './components/header/Header';
-import MainSection from './_view/mainSection/mainSection';
-import Card from './components/card/Card';
-import Banner from './components/banner/Banner';
-import Review from './components/review/Review';
-import Question from './components/question/Question';
-import Join from './components/join/Join';
-import Footer from './components/footer/Footer';
+import MainSection from './_view/mainSection';
+import Product from './_view/product';
+import Introduction from './_view/introduction';
+import Banner from './_view/banner';
+import Review from './_view/review';
+import Question from './_view/question';
+import Join from './_view/join';
+import Footer from './_view/footer';
 
 export default function InfluencerPage() {
   return (
-    <>
-      <Header />
+    <div>
       <MainSection />
-      <main className='ml-25 flex flex-col items-center'>
-        <Card />
-        <Banner />
-        <Review />
-        <Question />
-      </main>
+      <Product />
+      <Introduction />
+      <Banner />
+      <Review />
+      <Question />
       <Join />
       <Footer />
-    </>
+    </div>
   );
 }
