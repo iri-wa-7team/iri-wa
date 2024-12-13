@@ -5,5 +5,9 @@ export default function InfluencerLayout({
 }: {
   children: ReactNode;
 }) {
-  return <div className='font-pre'>{children}</div>;
+  return (
+    <div className='font-pre'>
+      {children}
+    </div>
+  );
 }
