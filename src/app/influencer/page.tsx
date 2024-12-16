@@ -9,7 +9,7 @@ import Footer from './_view/footer';
 
 export default function InfluencerPage() {
   return (
-    <div>
+    <>
       <MainSection />
       <Product />
       <Introduction />
@@ -18,6 +18,6 @@ export default function InfluencerPage() {
       <Question />
       <Join />
       <Footer />
-    </div>
+    </>
   );
 }

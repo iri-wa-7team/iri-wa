@@ -10,7 +10,12 @@ const InfluencerCard = ({
   style = 'bg-white',
 }: InfluencerCardProps) => {
   return (
-    <div className={twMerge('flex w-[1240px] flex-col rounded-[32px]', style)}>
+    <div
+      className={twMerge(
+        'flex w-full max-w-[640px] flex-col rounded-[14px]',
+        style
+      )}
+    >
       {children}
     </div>
   );

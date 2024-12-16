@@ -5,36 +5,42 @@ import Image from 'next/image';
 
 export default function MainSection() {
   return (
-    <div className='w-full'>
+    <div className='mt-[58px] w-full bg-cardMint'>
       <section
-        className='flex h-[808px] w-full justify-center bg-cardMint bg-repeat-x'
+        className='flex aspect-[404/227] max-h-[404px] w-full justify-center'
         style={{
           backgroundImage: `url(${backgroundBubble.src})`,
-          backgroundSize: 'auto', // 원본 크기로 반복
+          backgroundSize: 'contain',
+          backgroundRepeat: 'repeat-x',
         }}
       >
-        <article className='flex w-[1440px] items-center justify-between'>
-          <div className='flex flex-col gap-y-[101px] px-[100px]'>
+        <article className='m-auto mx-auto flex aspect-[720/227] w-full max-w-[720px] items-center justify-between'>
+          <div className='flex flex-col gap-y-[50px] px-[50px]'>
             <div className='flex flex-col gap-5 text-mainText'>
-              <h2 className='text-[32px] font-medium tracking-[-0.8px]'>
+              <h2 className='text-[clamp(12px,2.5vw,1rem)] font-medium tracking-[-0.8px]'>
                 인플루언서 마케팅 NO.1
               </h2>
 
-              <h1 className='text-[64px] font-bold leading-tight'>
+              <h1 className='text-[clamp(16px,4vw,2rem)] font-bold leading-tight'>
                 여행 인플루언서
                 <br />
                 마케팅의 시작, 와이리
               </h1>
             </div>
-            <ul className='flex gap-6'>
-              <li className='flex items-center justify-center rounded-[32px] bg-white p-8 shadow-qrBoxShadow'>
-                <div className='flex flex-col gap-y-4'>
-                  <Image src={appstoreQr} alt='app_store_qr' />
+            <ul className='flex origin-top-left scale-[min(1,max(0.5,100vw/1440))] gap-3'>
+              <li className='flex items-center justify-center rounded-[16px] bg-white p-[14px] shadow-qrBoxShadow'>
+                <div className='flex w-[80px] flex-col gap-y-2'>
+                  <Image
+                    src={appstoreQr}
+                    alt='app_store_qr'
+                    width={90}
+                    height={90}
+                  />
                   <div className='flex items-center justify-center gap-x-1'>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
-                      width='24'
-                      height='24'
+                      width='12'
+                      height='12'
                       viewBox='0 0 24 24'
                       fill='none'
                     >
@@ -43,20 +49,25 @@ export default function MainSection() {
                         fill='#424242'
                       />
                     </svg>
-                    <p className='text-xl font-medium tracking-[-1px] text-mainText'>
+                    <p className='text-[10px] font-medium text-mainText'>
                       APP Store
                     </p>
                   </div>
                 </div>
               </li>
-              <li className='flex items-center justify-center rounded-[32px] bg-white p-8 shadow-qrBoxShadow'>
-                <div className='flex flex-col gap-y-4'>
-                  <Image src={goolePlayQr} alt='google_play_qr' />
+              <li className='flex items-center justify-center rounded-[16px] bg-white p-[14px] shadow-qrBoxShadow'>
+                <div className='flex w-[80px] flex-col gap-y-2'>
+                  <Image
+                    src={goolePlayQr}
+                    alt='google_play_qr'
+                    width={138}
+                    height={138}
+                  />
                   <div className='flex items-center justify-center gap-x-1'>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
-                      width='24'
-                      height='24'
+                      width='12'
+                      height='12'
                       viewBox='0 0 24 24'
                       fill='none'
                     >
@@ -77,7 +88,7 @@ export default function MainSection() {
                         fill='#424242'
                       />
                     </svg>
-                    <p className='text-xl font-medium tracking-[-1px] text-mainText'>
+                    <p className='text-[10px] font-medium text-mainText'>
                       Google Play
                     </p>
                   </div>
@@ -85,7 +96,13 @@ export default function MainSection() {
               </li>
             </ul>
           </div>
-          <div className='h-full w-[454px] bg-cardYellow'></div>
+          <div
+            className='aspect-[227/404] w-full max-w-[227px] bg-cardYellow'
+            style={{
+              transform: `scale(min(1, max(0.5, 100vw / 1440)))`,
+              transformOrigin: 'top left',
+            }}
+          ></div>
         </article>
       </section>
     </div>
