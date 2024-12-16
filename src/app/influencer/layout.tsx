@@ -1,3 +1,4 @@
+import InfluNavBar from '@/components/navbar/InfluNavBar';
 import { ReactNode } from 'react';
 
 export default function InfluencerLayout({
@@ -7,6 +8,7 @@ export default function InfluencerLayout({
 }) {
   return (
     <div className='font-pre'>
+      <InfluNavBar />
       {children}
     </div>
   );

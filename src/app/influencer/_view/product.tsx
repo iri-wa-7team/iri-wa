@@ -35,50 +35,40 @@ export default function Product() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className='relative flex w-full justify-center py-[100px] pt-[140px]'>
-      <div className='flex w-[1440px] flex-col items-center'>
-        <h1 className='mb-[106px] text-5xl font-bold text-mainText'>
+    <div className='relative flex w-full justify-center py-[50px] pt-[35px]'>
+      <div className='flex w-full max-w-[720px] flex-col items-center px-8'>
+        <h1 className='mb-[35px] text-[clamp(16px,4vw,24px)] font-bold text-mainText'>
           숙박 및 상품을 <span className='text-primaryColor'>90% 할인가</span>에
           체험해보세요
         </h1>
-        <ul className='flex flex-col gap-[43px]'>
+        <ul className='flex w-full flex-col gap-[21.5px]'>
           <li>
-            <ul className='flex gap-9'>
+            <ul className='flex w-full gap-[2%]'>
               {campaignImages1.map((image) => (
-                <li key={image.name}>
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={389} // 적절한 너비 지정
-                  />
+                <li key={image.name} className='w-[32%]'>
+                  <Image src={image.src} alt={image.alt} className='w-full' />
                 </li>
               ))}
             </ul>
           </li>
           <li>
-            <ul className='flex gap-9'>
+            <ul className='flex w-full gap-[2%]'>
               {campaignImages2.map((image) => (
-                <li key={image.name}>
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={389} // 적절한 너비 지정
-                  />
+                <li key={image.name} className='w-[32%]'>
+                  <Image src={image.src} alt={image.alt} className='w-full' />
                 </li>
               ))}
             </ul>
           </li>
           <li className='relative flex flex-col items-center justify-center'>
-            <ul className='flex gap-9'>
+            <ul className='flex w-full gap-[2%]'>
               {campaignImage3.map((image) => (
-                <li key={image.name} className='relative'>
+                <li key={image.name} className='relative w-[32%]'>
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    width={389}
-                    className='relative z-10' // 이미지를 앞으로 가져옵니다
+                    className='relative z-10 w-full'
                   />
-                  {/* 각 이미지 위에 그라디언트 추가 */}
                   <div className='pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-white from-50% to-transparent to-100%'></div>
                 </li>
               ))}
@@ -86,7 +76,7 @@ export default function Product() {
             <button
               type='button'
               onClick={() => setIsModalOpen(true)}
-              className='absolute bottom-24 z-30 w-[370px] rounded-full bg-subText px-[32px] py-[10px] text-[1.875rem] font-semibold text-white transition-all duration-300 ease-in-out hover:bg-subText/90 hover:shadow-xl active:shadow-md'
+              className='absolute bottom-12 z-30 w-[clamp(120px,25vw,185px)] rounded-full bg-subText px-[16px] py-[5px] text-[clamp(10px,2vw,0.9375rem)] font-semibold text-white transition-all duration-300 ease-in-out hover:bg-subText/90 hover:shadow-xl active:shadow-md'
             >
               더 많은 캠페인 보기
             </button>
