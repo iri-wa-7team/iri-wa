@@ -1,22 +1,33 @@
+import Image from 'next/image';
+import mobileLogo from '@assets/images/wairi_logo_mobile.svg';
+import webLogo from '@assets/images/wairi_logo.svg';
 
 export default function HomeButton() {
   return (
     <div className='flex items-center'>
       {/* 데스크톱 로고 */}
-      <img
-        src='/assets/images/wairi_logo.svg'
-        alt='mobileLogo'
-        className='hidden xs:block xs:aspect-[3/1] xs:h-[clamp(18px, 3vw, 20px)] xs:max-h-[20px] xs:min-h-[18px] xs:min-w-[54px] xs:shrink-0 object-contain'
-        
-        
-      />
+ 
+      <div className='hidden xs:flex flex-shrink min-w-[48px] max-w-[72px] w-[clamp(48px,5vw,72px)]'>
+        <Image
+          src={webLogo}
+          alt='webLogo'
+          className='object-contain'
+          layout='responsive'
+        />
+      </div>
 
       {/* 모바일 로고 */}
-      <img
-        src='/assets/images/wairi_logo_mobile.svg'
-        alt='mobileLogo'
-        className='aspect-[1/1] object-contain block xs:hidden'
-      />
+      <div className='block xs:hidden'>
+        <Image
+          src={mobileLogo}
+          alt='mobileLogo'
+          width={30}
+          height={30}
+          className='object-contain'
+          style={{ minWidth: '18px', minHeight: '18px' }}
+        />
+      </div>
+
     </div>
   );
 }
