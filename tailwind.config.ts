@@ -1,4 +1,6 @@
+// tailwind.config.ts
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 export default {
   content: [
@@ -36,16 +38,38 @@ export default {
         montserrat: ['var(--font-montserrat)'],
       },
       fontSize: {
-        xxs: ["0.625rem", { lineHeight: "0.75rem" }], 
-        xxxs: ["0.5rem", { lineHeight: "0.5rem" }],
+        xxs: ['0.625rem', { lineHeight: '0.75rem' }],
+        xxxs: ['0.5rem', { lineHeight: '0.5rem' }],
       },
       borderWidth: {
         3: '3px',
       },
       screens: {
-        xs: '500px',  // 미디어 쿼리 xs: 500px 추가
+        xs: '500px', // 미디어 쿼리 xs: 500px 추가
+      },
+      keyframes: {
+        'scroll-right': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'scroll-left': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        'scroll-right': 'scroll-right 15s linear infinite', // 속도 증가
+        'scroll-left': 'scroll-left 15s linear infinite', // 속도 증가
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.pause': {
+          'animation-play-state': 'paused',
+        },
+      });
+    }),
+  ],
 } satisfies Config;
