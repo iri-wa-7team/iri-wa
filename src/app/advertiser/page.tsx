@@ -4,6 +4,7 @@ import PerformanceSection from './components/performance/PerformanceSection';
 import AboutSection from './components/about/AboutSection';
 import ScrollProvider from '@/hooks/useScroll';
 import HotelReview from './components/hotelreview/HotelReview';
+import LogoLine from './components/logoline/LogoLine';
 
 export default function AdvertiserPage() {
   return (
@@ -14,6 +15,7 @@ export default function AdvertiserPage() {
         <PerformanceSection />
         <AboutSection />
         <HotelReview />
+        <LogoLine />
       </ScrollProvider>
     </div>
   );
