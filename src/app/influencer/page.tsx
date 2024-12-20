@@ -5,7 +5,6 @@ import Banner from './_view/banner';
 import Review from './_view/review';
 import Question from './_view/question';
 import Join from './_view/join';
-import Footer from './_view/footer';
 
 export default function InfluencerPage() {
   return (
@@ -17,7 +16,6 @@ export default function InfluencerPage() {
       <Review />
       <Question />
       <Join />
-      <Footer />
     </>
   );
 }
