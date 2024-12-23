@@ -6,6 +6,8 @@ import ScrollProvider from '@/hooks/useScroll';
 import HotelReview from './components/hotelreview/HotelReview';
 import LogoLine from './components/logoline/LogoLine';
 import Cert from './components/cert/Cert';
+import Services from './components/services/Services';
+
 export default function AdvertiserPage() {
   return (
     <div>
@@ -17,6 +19,7 @@ export default function AdvertiserPage() {
         <HotelReview />
         <LogoLine />
         <Cert />
+        <Services />
       </ScrollProvider>
     </div>
   );
