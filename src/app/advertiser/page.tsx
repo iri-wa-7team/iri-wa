@@ -7,6 +7,7 @@ import HotelReview from './components/hotelreview/HotelReview';
 import LogoLine from './components/logoline/LogoLine';
 import Cert from './components/cert/Cert';
 import Services from './components/services/Services';
+import Question from './components/question/Question';
 
 export default function AdvertiserPage() {
   return (
@@ -20,6 +21,7 @@ export default function AdvertiserPage() {
         <LogoLine />
         <Cert />
         <Services />
+        <Question />
       </ScrollProvider>
     </div>
   );
