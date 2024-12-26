@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import service from '@assets/images/service.png';
 import { IoIosArrowDown } from 'react-icons/io';
-import { useState } from 'react';
 
 const plans = [
   {
