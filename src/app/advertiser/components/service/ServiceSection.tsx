@@ -36,7 +36,7 @@ const plansList = [
 ]
 
 export default function ServiceSection() {
-  const [selectedPlan, setSelectedPlan] = useState(0);
+  // const [selectedPlan, setSelectedPlan] = useState(0);
   return (
     <>
       <section className='mt-3 w-full bg-white pb-5 pt-10 font-montserrat'>
@@ -82,7 +82,7 @@ export default function ServiceSection() {
           </div>
 
           {/* 플랜 선택 버튼 (모바일 뷰) */}
-          <div className='mb-6 flex justify-center space-x-2 xs:hidden'>
+          {/* <div className='mb-6 flex justify-center space-x-2 xs:hidden'>
             {plans.map((plan, index) => (
               <button
                 key={index}
@@ -92,7 +92,7 @@ export default function ServiceSection() {
                 {plan.name}
               </button>
             ))}
-          </div>
+          </div> */}
 
           {/* 표 영역 */}
           <div className='overflow-x-auto px-14 xs:w-[768px]'>

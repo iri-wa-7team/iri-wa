@@ -19,7 +19,7 @@ function renderImages(images : SlideImage[]) {
 const sliderIndexes = slideImages.map(renderImages);
 
 export default function ReferenceSlider({
-  currentIndex, width
+  currentIndex,
 }: {
   currentIndex: number
   width?: number;
