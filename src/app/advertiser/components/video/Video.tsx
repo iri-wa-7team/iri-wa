@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import youTubeIcon from "@assets/images/channel_icon.png"
+import { IoMdArrowDropdown } from "react-icons/io";
 
 export default function Video() {
   return (
@@ -13,14 +16,14 @@ export default function Video() {
         ></iframe>
       </div>
       <div>
-        <div className='my-2 text-center text-xs text-black'>▼</div>
+        <div className='mt-2 flex justify-center items-center'><IoMdArrowDropdown /></div>
         <div className='xs:w-[500px] md:w-[768px] py-1 hover:bg-gray-100'>
           <Link
             href={'https://www.youtube.com/watch?v=ipYckn3E_lY'}
             className='flex items-center justify-center'
           >
-            <span className='text-xs font-semibold text-gray-600'>
-              소개 영상 다시 보기
+            <span className='text-sm text-gray-600 flex justify-center items-center gap-x-3 font-pre'>
+              <Image src={youTubeIcon} width={24} height={24} alt='youtubeIcon'/>소개 영상 다시 보기
             </span>
           </Link>
         </div>
