@@ -5,7 +5,7 @@ import { useScroll } from '@/hooks/useScroll';
 import Image from 'next/image';
 
 export default function Services() {
-  const {refs, scrollTo} = useScroll()
+  const { refs, scrollTo } = useScroll();
 
   const services = [
     {
@@ -39,25 +39,30 @@ export default function Services() {
   ];
 
   return (
-    <section className='flex scroll-mt-[58px] w-full justify-center bg-white py-16' ref={refs['service']}>
-      <div className='w-full px-4 xs:w-[768px]'>
+    <section
+      className='w-full scroll-mt-[58px] bg-white py-8 sm:py-12 md:py-16'
+      ref={refs['service']}
+    >
+      <div className='mx-auto w-full px-[20px] xs:w-[500px] sm:w-[640px] sm:px-4 md:w-[768px] lg:w-[1024px] xl:w-[1200px]'>
         {/* 헤더 */}
-        <div className='mb-12'>
-          <h3 className='mb-2 text-lg text-[#2EC8C8]'>MORE SERVICES</h3>
-          <h2 className='text-3xl font-bold text-gray-800'>
+        <div className='mb-8 sm:mb-10 md:mb-12'>
+          <h3 className='mb-2 text-base text-[#2EC8C8] sm:text-lg'>
+            MORE SERVICES
+          </h3>
+          <h2 className='text-xl font-bold text-gray-800 sm:text-2xl md:text-3xl'>
             더 많은 서비스들이 있어요
           </h2>
         </div>
 
         {/* 서비스 그리드 */}
-        <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+        <div className='grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 md:gap-6'>
           {services.map((service, index) => (
             <div
               key={index}
               className='overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white'
             >
-              <div className='p-6'>
-                <div className='relative mb-6 h-[200px] w-full'>
+              <div className='p-4 sm:p-5 md:p-6'>
+                <div className='relative mb-4 h-[140px] w-full sm:mb-5 sm:h-[160px] md:mb-6 md:h-[200px]'>
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -65,13 +70,16 @@ export default function Services() {
                     className='object-contain'
                   />
                 </div>
-                <h3 className='mb-3 text-xl font-bold text-gray-800'>
+                <h3 className='mb-2 text-lg font-bold text-gray-800 sm:mb-3 sm:text-xl'>
                   {service.title}
                 </h3>
-                <p className='mb-6 line-clamp-2 h-[40px] text-sm text-gray-600'>
+                <p className='mb-4 line-clamp-2 h-[32px] text-sm text-gray-600 sm:mb-5 sm:h-[36px] md:mb-6 md:h-[40px]'>
                   {service.description}
                 </p>
-                <button className='w-full rounded-lg bg-[#2EC8C8] py-4 text-white transition-colors hover:bg-[#29b5b5]' onClick={()=>scrollTo('inquiry')}>
+                <button
+                  className='w-full rounded-lg bg-[#2EC8C8] py-3 text-sm text-white transition-colors hover:bg-[#29b5b5] sm:py-3.5 md:py-4 md:text-base'
+                  onClick={() => scrollTo('inquiry')}
+                >
                   {service.buttonText}
                 </button>
               </div>

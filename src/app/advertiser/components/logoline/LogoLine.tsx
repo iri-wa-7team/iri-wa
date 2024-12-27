@@ -31,14 +31,14 @@ export default function LogoLine() {
   return (
     <section className='mt-[58px] w-full bg-white'>
       <div className='w-full bg-white'>
-        <div className='w-full overflow-hidden py-8'>
+        <div className='w-full overflow-hidden py-4 sm:py-8'>
           {/* 오른쪽으로 움직이는 상단 줄 */}
           <div className='group'>
             <div className='animate-scroll-right group-hover:pause flex'>
               {[...topLogos, ...topLogos, ...topLogos].map((logo, index) => (
                 <div
                   key={index}
-                  className='mx-4 flex h-12 w-32 flex-shrink-0 items-center justify-center'
+                  className='mx-2 flex h-8 w-24 flex-shrink-0 items-center justify-center sm:mx-4 sm:h-12 sm:w-32'
                 >
                   <Image
                     src={logo.src}
@@ -53,13 +53,13 @@ export default function LogoLine() {
           </div>
 
           {/* 왼쪽으로 움직이는 하단 줄 */}
-          <div className='group mt-8'>
+          <div className='group mt-4 sm:mt-8'>
             <div className='animate-scroll-left group-hover:pause flex'>
               {[...bottomLogos, ...bottomLogos, ...bottomLogos].map(
                 (logo, index) => (
                   <div
                     key={index}
-                    className='mx-4 flex h-12 w-32 flex-shrink-0 items-center justify-center'
+                    className='mx-2 flex h-8 w-24 flex-shrink-0 items-center justify-center sm:mx-4 sm:h-12 sm:w-32'
                   >
                     <Image
                       src={logo.src}
