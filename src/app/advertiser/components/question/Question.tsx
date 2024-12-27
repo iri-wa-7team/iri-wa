@@ -2,7 +2,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { useScroll } from '@/hooks/useScroll';
 
 interface FAQ {
@@ -21,25 +20,8 @@ const faqs: FAQ[] = [
   {
     id: 2,
     question: '아무나 와이리 인플루언서가 될 수 있나요?',
-    answer: (
-      <>
-        아니요. 아무나 와이리 인플루언서가 될 수 있는 것은 아닙니다. 회원이
-        등록한 채널에 대해 와이리 운영팀이 직접 검수하는 작업을 통해 와이리에서
-        설정한 최소 승인 기준을 통과한 인플루언서만 활동할 수 있습니다.
-        <br />
-        <br />
-        자세한 최소 승인 기준은 아래 링크를 통해 확인해주세요.
-        <br />
-        <Link
-          href='https://www.wairi.co.kr/influencer/board/view/notice/108/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='text-[#2EC8C8] hover:underline'
-        >
-          www.wairi.co.kr/influencer/board/view/notice/108/
-        </Link>
-      </>
-    ),
+    answer:
+      '아니요. 아무나 와이리 인플루언서가 될 수 있는 것은 아닙니다. 회원이 등록한 채널에 대해 와이리 운영팀이 직접 검수하는 작업을 통해 와이리에서 설정한 최소 승인 기준을 통과한 인플루언서만 활동할 수 있습니다.\n\n자세한 최소 승인 기준은 아래 링크를 통해 확인해주세요.\n\nwww.wairi.co.kr/influencer/board/view/notice/108/',
   },
   {
     id: 3,
@@ -63,44 +45,51 @@ const faqs: FAQ[] = [
 
 export default function Question() {
   const [openId, setOpenId] = useState<number | null>(null);
-  const {refs} = useScroll()
+  const { refs } = useScroll();
 
   const toggleQuestion = (id: number) => {
     setOpenId(openId === id ? null : id);
   };
 
   return (
-    <section className='mt-16 scroll-mt-[58px] flex w-full justify-center bg-white' ref={refs['faq']}>
-      <div className='w-full px-4 xs:w-[768px]'>
+    <section
+      className='mt-8 w-full scroll-mt-[58px] bg-white sm:mt-12 md:mt-16'
+      ref={refs['faq']}
+    >
+      <div className='mx-auto w-full px-[20px] xs:w-[500px] sm:w-[640px] sm:px-4 md:w-[768px] lg:w-[1024px] xl:w-[1200px]'>
         {/* 헤더 */}
-        <div className='mb-8'>
-          <h3 className='text-lg text-[#2EC8C8]'>QUESTION</h3>
-          <h2 className='text-2xl font-bold text-[#424242]'>자주 묻는 질문</h2>
+        <div className='mb-6 sm:mb-8'>
+          <h3 className='mb-2 text-base text-[#2EC8C8] sm:text-lg'>QUESTION</h3>
+          <h2 className='text-xl font-bold text-[#424242] sm:text-2xl md:text-3xl'>
+            자주 묻는 질문
+          </h2>
         </div>
 
         {/* FAQ 목록 */}
-        <div className='space-y-3'>
+        <div className='space-y-2 sm:space-y-3'>
           {faqs.map((faq) => (
             <div
               key={faq.id}
               className='overflow-hidden rounded-lg bg-[#F9F9F9] text-[#424242]'
             >
               <button
-                className='flex w-full items-center justify-between px-6 py-4 text-left'
+                className='flex w-full items-center justify-between px-4 py-3 text-left sm:px-6 sm:py-4'
                 onClick={() => toggleQuestion(faq.id)}
               >
-                <span className='font-medium'>Q. {faq.question}</span>
+                <span className='text-sm font-medium sm:text-base'>
+                  Q. {faq.question}
+                </span>
                 <span
-                  className={`text-blue-600 transition-transform duration-200 ${
-                    openId === faq.id ? 'rotate-180' : ''
-                  }`}
+                  className={`text-blue-600 transition-transform duration-200 ${openId === faq.id ? 'rotate-180' : ''}`}
                 >
                   {openId === faq.id ? '∧' : '∨'}
                 </span>
               </button>
               {openId === faq.id && (
-                <div className='border-t border-gray-200 px-6 py-4'>
-                  <div className='text-xs text-gray-600'>A. {faq.answer}</div>
+                <div className='border-t border-gray-200 px-4 py-3 sm:px-6 sm:py-4'>
+                  <div className='text-xs text-gray-600 sm:text-sm'>
+                    A. {faq.answer}
+                  </div>
                 </div>
               )}
             </div>
