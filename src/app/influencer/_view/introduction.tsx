@@ -75,55 +75,55 @@ export default function Introduction() {
           </InfluencerCard>
           <InfluencerCard style='bg-cardMint'>
             <div className='relative flex'>
-              <div className='flex h-[clamp(300px,50vw,454px)] flex-col gap-[25px] pl-[clamp(40px,8vw,80px)] text-mainText'>
-                <h1 className='pt-[99px] text-[clamp(24px,6vw,48px)] font-bold'>
+              <div className='flex h-[227px] flex-col gap-[17.5px] pl-[clamp(20px,5vw,40px)] text-mainText'>
+                <h1 className='pt-[49.5px] text-[clamp(16px,4vw,24px)] font-bold'>
                   체험 선정 여부 96시간 이내
                 </h1>
-                <p className='relative z-10 text-[clamp(18px,4.5vw,36px)] font-normal tracking-[-0.0875rem]'>
+                <p className='relative z-10 text-[clamp(14px,3vw,18px)] font-normal tracking-[-0.04375rem]'>
                   빠른 결과 안내를 통해 여행을 차질 없이 계획해보세요.
                 </p>
               </div>
               <Image
                 src={check}
                 alt='체크'
-                className='absolute bottom-0 right-0 w-[clamp(200px,40vw,300px)]'
+                className='absolute bottom-0 right-0 w-[clamp(150px,30vw,227px)]'
               />
             </div>
           </InfluencerCard>
           <InfluencerCard style='bg-cardGray'>
-            <div className='relative flex'>
-              <div className='flex h-[clamp(500px,80vw,784px)] flex-col gap-[25px] pl-[clamp(40px,8vw,80px)] text-mainText'>
-                <h1 className='pt-[108px] text-[clamp(24px,6vw,48px)] font-bold'>
+            <div className='relative'>
+              <div className='flex h-[392px] flex-col gap-[12.5px] pl-[clamp(20px,5vw,40px)] text-mainText'>
+                <h1 className='pt-[54px] text-[clamp(16px,4vw,24px)] font-bold'>
                   와이리가 인증하는 영향력 <br />
                   등급을 받아보세요
                 </h1>
-                <div className='flex flex-col gap-[10px]'>
-                  <p className='z-10 text-[clamp(18px,4.5vw,36px)] font-normal tracking-[-0.0875rem]'>
+                <div className='flex flex-col gap-[5px]'>
+                  <p className='z-10 text-[clamp(14px,3vw,18px)] font-normal tracking-[-0.0875rem]'>
                     와이리는 채널에 따라 예상 영향력에 따라서 등급을 부여하고
                     있습니다. <br />
                     와이리에서 인증하는 인플루언서가 되어보세요.
                   </p>
-                  <span className='text-[clamp(16px,3.5vw,28px)] font-light text-thirdText'>
+                  <span className='text-[clamp(10px,2.5vw,12px)] font-light text-thirdText'>
                     *채널 승급은 매월말에 신청을 받고 있습니다.
                   </span>
                 </div>
               </div>
-              <div className='absolute bottom-0 left-[50%] translate-x-[-50%]'>
-                <div className='flex items-end gap-[clamp(30px,6vw,63.9px)]'>
+              <div className='absolute bottom-0 left-[50%] translate-x-[-75%]'>
+                <div className='flex items-end gap-[31.9px]'>
                   <Image
                     src={silver}
                     alt='실버'
-                    className='w-[clamp(100px,20vw,200px)]'
+                    className='w-[clamp(80px,10vw,93px)]'
                   />
                   <Image
                     src={gold}
                     alt='골드'
-                    className='w-[clamp(100px,20vw,200px)]'
+                    className='w-[clamp(80px,10vw,93px)]'
                   />
                   <Image
                     src={black}
                     alt='블랙'
-                    className='w-[clamp(100px,20vw,200px)]'
+                    className='w-[clamp(80px,10vw,93px)]'
                   />
                 </div>
               </div>
