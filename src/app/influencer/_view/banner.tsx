@@ -2,16 +2,16 @@ import Image from 'next/image';
 
 export default function Banner() {
   return (
-    <section className='mt-[150px] h-[252px] w-full bg-bannerCardGray'>
-      <div className='flex justify-center gap-[137px]'>
-        <div className='flex flex-col pb-[60px] pt-[72px]'>
-          <h4 className='text-[2.5rem] font-semibold leading-[60px] tracking-tight text-mainText'>
+    <section className='mt-[75px] flex h-[116px] w-full justify-center bg-bannerCardGray'>
+      <div className='mx-[5.55%] flex max-w-[640px] justify-between'>
+        <div className='flex flex-col pb-[30px] pt-[36px]'>
+          <h4 className='text-[clamp(16px,3vw,20px)] font-semibold leading-[30px] tracking-tight text-mainText'>
             인플루언서 광고가 필요하신가요?
           </h4>
-          <span className='relative text-[2.5rem] font-semibold leading-[60px] tracking-tight text-primaryColor'>
+          <span className='relative text-[clamp(16px,3vw,20px)] font-semibold leading-[30px] tracking-tight text-primaryColor'>
             무료로 하는 와이리 마케팅 알아보기
             <svg
-              className='absolute right-[-42px] top-[50%] translate-y-[-50%]'
+              className='absolute right-[-21px] top-[50%] h-[16px] w-[16px] translate-y-[-50%]'
               width='32'
               height='32'
               viewBox='0 0 32 32'
@@ -31,8 +31,8 @@ export default function Banner() {
         <Image
           src='/assets/images/banner_influencer.png'
           alt='human-icon'
-          width={370}
-          height={232}
+          width={185}
+          height={116}
         />
       </div>
     </section>
