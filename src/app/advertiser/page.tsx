@@ -8,6 +8,7 @@ import LogoLine from './components/logoline/LogoLine';
 import Cert from './components/cert/Cert';
 import Services from './components/services/Services';
 import Question from './components/question/Question';
+import Inquiry from './components/inquiry/Inquiry';
 import ServiceSection from './components/service/ServiceSection';
 import ReferenceSection from './components/reference/ReferenceSection';
 
@@ -26,6 +27,7 @@ export default function AdvertiserPage() {
         <Cert />
         <Services />
         <Question />
+        <Inquiry />
       </ScrollProvider>
     </div>
   );
