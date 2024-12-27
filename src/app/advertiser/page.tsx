@@ -9,6 +9,8 @@ import Cert from './components/cert/Cert';
 import Services from './components/services/Services';
 import Question from './components/question/Question';
 import Inquiry from './components/inquiry/Inquiry';
+import ServiceSection from './components/service/ServiceSection';
+import ReferenceSection from './components/reference/ReferenceSection';
 
 export default function AdvertiserPage() {
   return (
@@ -18,6 +20,8 @@ export default function AdvertiserPage() {
         <IntroSection />
         <PerformanceSection />
         <AboutSection />
+        <ServiceSection />
+        <ReferenceSection />
         <HotelReview />
         <LogoLine />
         <Cert />
