@@ -4,6 +4,7 @@ import { useState } from 'react';
 import ReferenceSlider from './ReferenceSlider';
 import Image from 'next/image';
 import ReButton from './ReButton';
+import { useScroll } from '@/hooks/useScroll';
 
 // const bottomImage = referenceImages.map((image) => {
 //   <Image />;
@@ -11,13 +12,14 @@ import ReButton from './ReButton';
 
 export default function ReferenceSection() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const {refs} = useScroll();
 
   const clickHandler = (index: number) => {
     setCurrentIndex(index);
   };
 
   return (
-    <section className='mt-10 w-full bg-primaryColor font-pre text-white'>
+    <div className='mt-10 scroll-mt-[58px] w-full bg-primaryColor font-pre text-white' ref={refs['case']}>
       <div className='mx-auto flex w-[768px] justify-between'>
         <div className='relative left-14 flex flex-col'>
           {/* Title Section */}
@@ -72,6 +74,6 @@ export default function ReferenceSection() {
 
         <ReferenceSlider currentIndex={currentIndex} />
       </div>
-    </section>
+    </div>
   );
 }

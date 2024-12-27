@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useScroll } from '@/hooks/useScroll';
 
 interface FAQ {
   id: number;
@@ -62,13 +63,14 @@ const faqs: FAQ[] = [
 
 export default function Question() {
   const [openId, setOpenId] = useState<number | null>(null);
+  const {refs} = useScroll()
 
   const toggleQuestion = (id: number) => {
     setOpenId(openId === id ? null : id);
   };
 
   return (
-    <section className='mt-16 flex w-full justify-center bg-white'>
+    <section className='mt-16 scroll-mt-[58px] flex w-full justify-center bg-white' ref={refs['faq']}>
       <div className='w-full px-4 xs:w-[768px]'>
         {/* 헤더 */}
         <div className='mb-8'>

@@ -1,6 +1,7 @@
 // src/app/advertiser/components/inquiry/Inquiry.tsx
 'use client';
 
+import { useScroll } from '@/hooks/useScroll';
 import { useState } from 'react';
 
 interface InquiryData {
@@ -13,6 +14,7 @@ interface InquiryData {
 }
 
 export default function Inquiry() {
+  const {refs} = useScroll()
   const [formData, setFormData] = useState<InquiryData>({
     company: '',
     name: '',
@@ -47,7 +49,7 @@ export default function Inquiry() {
   };
 
   return (
-    <section className='mt-16 w-full bg-[#424242] py-16'>
+    <section className='mt-16 scroll-mt-[58px] w-full bg-[#424242] py-16' ref={refs['inquiry']}>
       <div className='mx-auto w-full px-4 xs:w-[768px]'>
         <form onSubmit={handleSubmit}>
           {/* 제목 */}

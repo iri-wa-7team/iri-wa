@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useScroll } from '@/hooks/useScroll';
 import Button from '../buttons/Button';
@@ -26,9 +26,30 @@ export default function AdNavBar() {
               >
                 서비스 소개
               </Button>
-              <Button variant='light'>진행 사례</Button>
-              <Button variant='light'>서비스 종류</Button>
-              <Button variant='light'>FAQ</Button>
+              <Button
+                variant='light'
+                onClick={() => {
+                  scrollTo('case');
+                }}
+              >
+                진행 사례
+              </Button>
+              <Button
+                variant='light'
+                onClick={() => {
+                  scrollTo('service');
+                }}
+              >
+                서비스 종류
+              </Button>
+              <Button
+                variant='light'
+                onClick={() => {
+                  scrollTo('faq');
+                }}
+              >
+                FAQ
+              </Button>
             </div>
             <div className='flex items-center justify-center gap-x-2'>
               <Button variant='primary' className='px-2'>
