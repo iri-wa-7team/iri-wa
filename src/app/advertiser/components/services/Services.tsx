@@ -1,9 +1,12 @@
 // src/app/advertiser/components/services/Services.tsx
 'use client';
 
+import { useScroll } from '@/hooks/useScroll';
 import Image from 'next/image';
 
 export default function Services() {
+  const {refs, scrollTo} = useScroll()
+
   const services = [
     {
       image: '/assets/images/Service_Macro.svg',
@@ -36,7 +39,7 @@ export default function Services() {
   ];
 
   return (
-    <section className='flex w-full justify-center bg-white py-16'>
+    <section className='flex scroll-mt-[58px] w-full justify-center bg-white py-16' ref={refs['service']}>
       <div className='w-full px-4 xs:w-[768px]'>
         {/* 헤더 */}
         <div className='mb-12'>
@@ -68,7 +71,7 @@ export default function Services() {
                 <p className='mb-6 line-clamp-2 h-[40px] text-sm text-gray-600'>
                   {service.description}
                 </p>
-                <button className='w-full rounded-lg bg-[#2EC8C8] py-4 text-white transition-colors hover:bg-[#29b5b5]'>
+                <button className='w-full rounded-lg bg-[#2EC8C8] py-4 text-white transition-colors hover:bg-[#29b5b5]' onClick={()=>scrollTo('inquiry')}>
                   {service.buttonText}
                 </button>
               </div>

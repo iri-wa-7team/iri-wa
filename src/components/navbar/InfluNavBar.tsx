@@ -6,7 +6,7 @@ import HomeButton from '../buttons/HomeButton';
 export default function InfluNavBar() {
   return (
     <>
-      <div className='fixed left-0 top-0 flex max-h-[58px] min-h-[58px] w-full flex-col justify-center bg-white shadow-lg'>
+      <div className='fixed z-30 left-0 top-0 flex max-h-[58px] min-h-[58px] w-full flex-col justify-center bg-white shadow-lg'>
         <div className='flex items-center justify-between px-3 py-1'>
           {/* 홈 버튼 */}
           <HomeButton />

@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useContext, useRef, createContext } from "react";
 
-type RefKeys = "intro" | "case" | "service" | "faq";
+type RefKeys = "intro" | "case" | "service" | "faq" | "inquiry";
 
 const ScrollContext = createContext<{
   refs: { [key in RefKeys]: React.RefObject<HTMLDivElement> };
@@ -14,12 +14,14 @@ export default function ScrollProvider({ children }: { children: ReactNode }) {
   const caseRef = useRef<HTMLDivElement>(null);
   const serviceRef = useRef<HTMLDivElement>(null);
   const faqRef = useRef<HTMLDivElement>(null);
+  const inquiryRef = useRef<HTMLDivElement>(null);
 
   const refs: { [keys in RefKeys]: React.RefObject<HTMLDivElement> } = {
     intro: introRef,
     case: caseRef,
     service: serviceRef,
     faq: faqRef,
+    inquiry: inquiryRef,
   };
 
   const scrollTo = (key: RefKeys) => {

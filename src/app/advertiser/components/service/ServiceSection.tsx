@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import service from '@assets/images/service.png';
 import { IoIosArrowDown } from 'react-icons/io';
+import { useScroll } from '@/hooks/useScroll';
 
 const plans = [
   {
@@ -35,6 +36,7 @@ const plansList = [
 ]
 
 export default function ServiceSection() {
+  const {scrollTo} = useScroll()
   // const [selectedPlan, setSelectedPlan] = useState(0);
   return (
     <>
@@ -108,7 +110,7 @@ export default function ServiceSection() {
                           {plan.price}
                         </span>
                       </div>
-                      <div className='mx-3 mt-3 cursor-pointer rounded-2xl bg-black py-1 text-center text-white'>
+                      <div className='mx-3 mt-3 cursor-pointer rounded-2xl bg-black py-1 text-center text-white' onClick={()=>scrollTo('inquiry')}>
                         이용하기
                       </div>
                     </th>
