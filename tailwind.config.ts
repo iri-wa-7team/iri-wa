@@ -59,12 +59,12 @@ export default {
         'scroll-down': {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-50%)' },
-        }
+        },
       },
       animation: {
         'scroll-right': 'scroll-right 15s linear infinite', // 속도 증가
         'scroll-left': 'scroll-left 15s linear infinite', // 속도 증가
-        'scroll-down' : 'scroll-down 25s linear infinite',
+        'scroll-down': 'scroll-down 25s linear infinite',
       },
     },
   },
@@ -77,8 +77,7 @@ export default {
         '.text-balance': {
           'text-wrap': 'balance',
         },
-      }
-    );
+      });
     }),
   ],
 } satisfies Config;
