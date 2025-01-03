@@ -12,7 +12,7 @@ const InfluencerCard = ({
   return (
     <div
       className={twMerge(
-        'flex w-full max-w-[640px] flex-col rounded-[14px]',
+        'flex w-full max-w-[720px] flex-col rounded-[14px]',
         style
       )}
     >

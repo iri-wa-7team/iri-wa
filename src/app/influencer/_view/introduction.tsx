@@ -23,8 +23,8 @@ const snsImages = [
 
 export default function Introduction() {
   return (
-    <div className='mt-[45px] flex justify-center px-[clamp(20px,6vw,50px)]'>
-      <div>
+    <div className='mt-[45px] flex justify-center xs:px-[clamp(20px,6vw,50px)]'>
+      <div className='flex w-full flex-col justify-center px-5 xs:w-[720px] xs:px-8'>
         <div className='mb-[28px] flex flex-col gap-y-1.5'>
           <h2 className='font-montserrat text-primaryColor'>INTRODUCTION</h2>
           <h1 className='text-[clamp(16px,4vw,24px)] font-bold text-mainText'>
@@ -33,8 +33,8 @@ export default function Introduction() {
         </div>
         <div className='flex flex-col gap-y-3'>
           <InfluencerCard style='bg-cardYellow'>
-            <div className='flex flex-col gap-[17.5px] pl-[clamp(20px,5vw,40px)] text-mainText'>
-              <h1 className='pt-[43px] text-[clamp(16px,4vw,24px)] font-bold'>
+            <div className='flex flex-col gap-[17.5px] pl-5 text-mainText xs:pl-[clamp(20px,5vw,40px)]'>
+              <h1 className='pt-[30px] text-[clamp(16px,4vw,24px)] font-bold xs:pt-[43px]'>
                 SNS 채널만 가지고 있다면!
               </h1>
               <p className='text-[clamp(14px,3vw,18px)] font-normal'>
@@ -42,7 +42,7 @@ export default function Introduction() {
                 가장 많은 SNS 종류를 승인해드리고 있어요!
               </p>
             </div>
-            <div className='mb-[36px] mt-[28.5px] flex w-full items-center bg-gradient-to-r from-white from-0% to-transparent to-100% px-[clamp(20px,5vw,40px)] py-[21.5px]'>
+            <div className='mb-5 mt-[18px] flex w-full items-center bg-gradient-to-r from-white from-0% to-transparent to-100% px-[clamp(20px,5vw,40px)] py-[10px] xs:mb-[36px] xs:mt-[28.5px] xs:py-[21.5px]'>
               <ul className='flex w-full justify-between'>
                 {snsImages.map((icon) => (
                   <li key={icon.name} className='w-[clamp(24px,4vw,36.5px)]'>
@@ -55,7 +55,7 @@ export default function Introduction() {
           <InfluencerCard style='bg-cardGray'>
             <div className='relative flex h-[227px]'>
               <div className='flex flex-col gap-[12.5px] pl-[clamp(20px,5vw,40px)] text-mainText'>
-                <h1 className='pt-[61.5px] text-[clamp(16px,4vw,24px)] font-bold'>
+                <h1 className='pt-[30px] text-[clamp(16px,4vw,24px)] font-bold xs:pt-[61.5px]'>
                   원하는 날짜에 신청가능
                 </h1>
                 <p className='relative z-10 text-[clamp(14px,3vw,18px)] font-normal tracking-[-0.04375rem]'>
