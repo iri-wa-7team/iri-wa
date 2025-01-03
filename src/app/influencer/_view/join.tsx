@@ -5,7 +5,7 @@ import phone from '/public/assets/images/phone_wairi_splash_short.png';
 export default function Join() {
   return (
     <section
-      className='flex h-[324.5] w-full justify-center bg-cardMint'
+      className='flex h-[324.5px] w-full justify-center bg-cardMint'
       style={{
         backgroundImage: `url(${backgroundBubble.src})`,
         backgroundSize: 'contain',
@@ -14,7 +14,7 @@ export default function Join() {
         height: '324.5px',
       }}
     >
-      <div className='mx-[72px] flex max-w-[648px] justify-between'>
+      <div className='flex max-w-[576px] justify-between overflow-hidden'>
         <div className='flex flex-col items-center justify-center gap-[22px]'>
           <h1 className='text-[clamp(20px,5vw,24px)] font-bold leading-[1.98rem] tracking-[-5%] text-mainText'>
             와이리 가입하기
@@ -84,11 +84,9 @@ export default function Join() {
             </button>
           </div>
         </div>
-        <Image
-          src={phone}
-          alt={'phone-image'}
-          className='w-[clamp(180px,30vw,228px)] pt-[55px]'
-        />
+        <div className='h-[324.5px] pt-[55px]'>
+          <Image src={phone} alt={'phone-image'} height={269.5} />
+        </div>
       </div>
     </section>
   );

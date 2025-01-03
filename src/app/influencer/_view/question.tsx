@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+
 const questionContent = [
   {
     question: 'Q. 누구나 사용할 수 있나요?',
@@ -41,9 +43,15 @@ const questionContent = [
 ];
 
 function Question() {
+  const [openId, setOpenId] = useState<number | null>(null);
+
+  const toggleQuestion = (id: number) => {
+    setOpenId(openId === id ? null : id);
+  };
+
   return (
-    <section className='flex justify-center'>
-      <div className='mx-[6.9%] flex max-w-[620px] flex-col pb-[60px] pt-[45px]'>
+    <section className='flex w-full justify-center'>
+      <div className='flex w-[clamp(400px,50vw,620px)] flex-col pb-[60px] pt-[45px]'>
         <div className='mb-7'>
           <span className='mb-3 text-[0.875rem] font-normal text-primaryColor'>
             QUESTION
@@ -57,14 +65,21 @@ function Question() {
             return (
               <li
                 key={q.index}
-                className='flex flex-col gap-3 rounded-[16px] bg-cardGray px-[2.9%] py-6'
+                className='flex flex-col gap-3 rounded-[16px] bg-cardGray px-[2.9%] py-4'
               >
-                <div className='flex items-center justify-between'>
-                  <h3 className='break-keep text-[0.875rem] font-medium leading-[1.3125rem] tracking-[-5%] text-mainText'>
+                <button
+                  className='flex items-center justify-between'
+                  onClick={() => toggleQuestion(q.index)}
+                >
+                  <span className='break-keep text-[0.875rem] font-medium leading-[1.3125rem] tracking-[-5%] text-mainText'>
                     {q.question}
-                  </h3>
+                  </span>
+
                   <svg
-                    className='h-[24px] w-[24px]'
+                    className={
+                      'h-6 w-6 transition-transform duration-300 ' +
+                      (openId !== q.index ? ' rotate-0' : ' rotate-180')
+                    }
                     width='48'
                     height='48'
                     viewBox='0 0 48 48'
@@ -79,11 +94,17 @@ function Question() {
                       strokeLinejoin='round'
                     />
                   </svg>
+                </button>
+                <div
+                  className={
+                    'border-t border-gray-200' +
+                    (openId !== q.index ? ' hidden' : ' block')
+                  }
+                >
+                  <p className='cursor-default break-keep pt-3 text-[0.875rem] font-medium leading-[1.3125rem] tracking-[-5%] text-[#757575]'>
+                    {q.answer}
+                  </p>
                 </div>
-                <div className='h-[2px] w-full bg-questionBoxBorder'></div>
-                <p className='break-keep text-[0.875rem] font-medium leading-[1.3125rem] tracking-[-5%] text-[#757575]'>
-                  {q.answer}
-                </p>
               </li>
             );
           })}
