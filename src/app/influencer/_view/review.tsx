@@ -5,7 +5,7 @@ import quote from '/public/assets/images/quote.svg';
 function Review() {
   return (
     <section className='flex w-full justify-center'>
-      <div className='mx-[6.9%] flex max-w-[620px] flex-col pb-[60px] pt-[45px]'>
+      <div className='mx-[6.9%] flex w-[clamp(400px,50vw,620px)] flex-col pb-[60px] pt-[45px] xs:pt-14'>
         {/* title */}
         <div className='mb-7'>
           <span className='mb-3 text-[0.875rem] font-normal text-primaryColor'>

@@ -3,8 +3,8 @@ import Image from 'next/image';
 export default function Banner() {
   return (
     <section className='mt-[75px] flex h-[116px] w-full justify-center bg-bannerCardGray'>
-      <div className='mx-[5.55%] flex max-w-[640px] justify-between'>
-        <div className='flex flex-col pb-[30px] pt-[36px]'>
+      <div className='flex w-[560px] justify-between'>
+        <div className='flex flex-col pb-[30px] pl-[20px] pt-[36px]'>
           <h4 className='text-[clamp(16px,3vw,20px)] font-semibold leading-[30px] tracking-tight text-mainText'>
             인플루언서 광고가 필요하신가요?
           </h4>
@@ -28,12 +28,14 @@ export default function Banner() {
             </svg>
           </span>
         </div>
-        <Image
-          src='/assets/images/banner_influencer.png'
-          alt='human-icon'
-          width={185}
-          height={116}
-        />
+        <div>
+          <Image
+            src='/assets/images/banner_influencer.png'
+            alt='human-icon'
+            width={185}
+            height={116}
+          />
+        </div>
       </div>
     </section>
   );
